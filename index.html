@@ -52,6 +52,16 @@
             </div>
         </section>
     </div>
+    <div class="scene" id="scene">
+    <div class="cube">
+        <div class="front">FRONT</div>
+        <div class="back">BACK</div>
+        <div class="right">RIGHT</div>
+        <div class="left">LEFT</div>
+        <div class="top">TOP</div>
+        <div class="bottom">BOTTOM</div>
+    </div>
+    </div>
     <script>
         setTimeout(() => {
             document.getElementById("intro").style.opacity = "0";
@@ -60,6 +70,30 @@
                 document.getElementById("main-content").classList.remove("hidden");
             }, 800);
         }, 3000);
+
+        const scene = document.getElementById('scene');
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+
+scene.addEventListener('mousedown', (e) => {
+isDragging = true;
+offsetX = e.clientX - scene.offsetLeft;
+offsetY = e.clientY - scene.offsetTop;
+});
+
+
+window.addEventListener('mousemove', (e) => {
+if (!isDragging) return;
+scene.style.left = e.clientX - offsetX + 'px';
+scene.style.top = e.clientY - offsetY + 'px';
+});
+
+
+window.addEventListener('mouseup', () => {
+isDragging = false;
+});
     </script>
 </body>
 </html>
