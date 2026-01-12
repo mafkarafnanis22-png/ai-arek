@@ -36,18 +36,6 @@
             </div>
             <!-- Teks hero tetap di atas slider -->
             <div class="hero-text">
-                <!-- Animasi 3D -->
-            <div class="floating-3d" id="floating3d">
-              <div class="cube-auto">
-                <span class="f1"></span>
-                <span class="f2"></span>
-                <span class="f3"></span>
-                <span class="f4"></span>
-                <span class="f5"></span>
-                <span class="f6"></span>
-              </div>
-            </div>
-
                 <h1>Hey - Explore Bangkalan Yuk!</h1>
                 <p>
                     Bangkalan adalah salah satu kabupaten yang terletak di ujung barat Pulau Madura,
@@ -72,23 +60,6 @@
                 document.getElementById("main-content").classList.remove("hidden");
             }, 800);
         }, 3000);
-        const floating = document.getElementById("floating3d");
-  let drag = false, offsetX = 0, offsetY = 0;
-
-  floating.addEventListener("mousedown", e => {
-    drag = true;
-    offsetX = e.clientX - floating.offsetLeft;
-    offsetY = e.clientY - floating.offsetTop;
-  });
-
-  document.addEventListener("mousemove", e => {
-    if (!drag) return;
-    floating.style.left = e.clientX - offsetX + "px";
-    floating.style.top  = e.clientY - offsetY + "px";
-    floating.style.right = "auto";
-  });
-
-  document.addEventListener("mouseup", () => drag = false);
     </script>
 </body>
 </html>
