@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>QuizKalan | Peel The Salak</title>
+    <link rel='icon' type='image/png' href='quiz.png'>
+    <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo2">QuizKalan</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="materi.html">Explore</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="content">
+        <h2 id="judul"></h2>
+
+        <div class="gambar-wrapper">
+    <img id="gambar-utama" class="gambar-utama">
+    <div class="gambar-samping">
+        <img id="gambar-1">
+        <img id="gambar-2">
+    </div>
+</div>
+
+        <p id="isi"></p>
+        <br>
+        <a href="materi.html" class="tombol">
+        <i class="fa-solid fa-right-to-bracket"> </i>
+        </a>
+    </div>
+</div>
+
+<script>
+
+const gambarUtama = document.getElementById("gambar-utama");
+const gambar1 = document.getElementById("gambar-1");
+const gambar2 = document.getElementById("gambar-2");
+
+
+const id = new URLSearchParams(window.location.search).get("id");
+
+if (id == 1) {
+    judul.innerText = "Pengenalan Kota Salak";
+
+ gambarUtama.src = "images/buah.jpeg";
+    gambar1.src = "fot/salak2.jpeg";
+    gambar2.src = "https://www.koranmadura.com/wp-content/uploads/2021/03/IMG_20210322_172420.jpg";
+    isi.innerHTML = `
+        <p>
+            Kabupaten Bangkalan, Madura, Jawa Timur, sejak lama dikenal sebagai daerah
+            penghasil salak. Keberadaan perkebunan salak yang melimpah menjadikan daerah ini
+            mendapat julukan sebagai <strong>Kota Salak</strong>.
+        </p>
+
+        <p>
+            Di kawasan perkotaan Bangkalan, terdapat permukiman warga yang dikenal dengan
+            nama <em>Jalan Pesalakan</em>, yang berada di Kelurahan Kemayoran, Kecamatan Kota.
+            Penamaan ini menjadi bukti bahwa salak pernah menjadi bagian penting
+            dari kehidupan masyarakat Bangkalan.
+        </p>
+
+        <h3>Asal Usul Julukan Kota Salak</h3>
+
+        <p>
+            Julukan Kota Salak bukanlah nama resmi dari pemerintah, melainkan identitas
+            yang diberikan oleh masyarakat karena banyaknya kebun salak yang tersebar
+            di wilayah Bangkalan pada masa lalu.
+        </p>
+
+        <p>
+            Namun, sejak tahun 1990-an, seiring dengan pertumbuhan penduduk dan pembangunan
+            kawasan perkotaan, banyak lahan perkebunan salak yang beralih fungsi
+            menjadi permukiman warga.
+        </p>
+
+        <h3>Tantangan Pelestarian Identitas</h3>
+
+        <p>
+            Rektor Universitas Trunojoyo Madura (UTM), Muh. Syarif, menyampaikan bahwa
+            jika ikon Kota Salak tidak dilestarikan secara serius, maka identitas tersebut
+            dikhawatirkan hanya akan tersisa dalam bentuk nama semata.
+        </p>
+
+        <p>
+            Menurutnya, perkampungan pesalakan yang ada saat ini sebagian besar
+            hanya tinggal nama, karena jumlah pohon salak sudah semakin berkurang.
+        </p>
+
+        <h3>Harapan untuk Masa Depan</h3>
+
+        <p>
+            Pemerintah Kabupaten Bangkalan diharapkan dapat lebih fokus dalam membangun
+            dan melestarikan kawasan perkampungan salak. Dengan begitu, identitas
+            Kota Salak tidak hanya menjadi simbol, tetapi juga dapat dikembangkan
+            sebagai potensi wisata dan ekonomi masyarakat.
+        </p>
+
+        <p>
+            Apabila wisatawan ingin membeli salak khas Bangkalan, mereka dapat langsung
+            mengunjungi kawasan perkampungan salak yang tertata dan terawat dengan baik.
+        </p>
+    `;
+}
+
+
+if (id == 2) {
+    judul.innerText = "Sejarah Bangkalan";
+   gambarUtama.src = "https://ik.trn.asia/uploads/2021/06/1623845383898.jpeg";
+    gambar1.src = "fot/bangkalan.webp";
+    gambar2.src = "fot/ba.jpeg";
+
+    isi.innerHTML = `
+        <p>
+            Setelah Pangeran Pratanu masuk Islam dan mempelajari ajaran tersebut dari Empu Bageno,
+            ia mulai menyebarkan Islam ke wilayah Arosbaya dan sekitarnya.
+            Penyebaran ini dilakukan secara damai dan bertahap.
+        </p>
+
+        <p>
+            Ayahnya, Raja Praghalba, belum tertarik memeluk Islam hingga akhir hayatnya.
+            Setelah wafat, kepemimpinan Bangkalan dilanjutkan oleh Pangeran Pratanu
+            yang kemudian dikenal sebagai raja Islam pertama di Madura.
+        </p>
+
+        <h3>Awal Mula Kerajaan di Bangkalan</h3>
+
+        <p>
+            Jauh sebelum Islam berkembang, Bangkalan telah memiliki beberapa kerajaan kecil.
+            Salah satunya adalah Kerajaan Plakaran yang didirikan oleh Kyai Demang dari Sampang.
+        </p>
+
+        <h3>Keturunan Pangeran Pratanu</h3>
+
+        <ul>
+            <li>Pangeran Sidhing Gili – memerintah di Sampang</li>
+            <li>Raden Koro (Pangeran Tengah) – memerintah di Arosbaya</li>
+        </ul>
+    `;
+}
+
+if (id == 3) {
+    judul.innerText = "Jembatan Suramadu";
+   gambarUtama.src = "fot/ma.jpg";
+    gambar1.src = "fot/ra.jpeg";
+    gambar2.src = "fot/su.jpg";
+
+    isi.innerHTML = `
+        <p>
+            Jembatan Suramadu (singkatan dari <strong>Surabaya–Madura</strong>) merupakan
+            jembatan kabel pancang yang menghubungkan Kota Surabaya di Pulau Jawa
+            dengan Kabupaten Bangkalan di Pulau Madura, Jawa Timur.
+            Jembatan ini menjadi jembatan pertama yang melintasi Selat Madura.
+        </p>
+
+        <p>
+            Jembatan sepanjang kurang lebih <strong>5,4 kilometer</strong> ini resmi dibuka
+            pada Juni 2009 dan hingga kini dikenal sebagai jembatan terpanjang di Indonesia
+            serta salah satu yang terpanjang di belahan bumi selatan.
+        </p>
+
+        <h3>Sejarah Pembangunan</h3>
+
+        <p>
+            Pembangunan Jembatan Suramadu dimulai dengan peletakan batu pertama
+            (ground breaking) oleh Presiden Megawati Soekarnoputri pada
+            20 Agustus 2003. Jembatan ini kemudian diresmikan oleh Presiden
+            Susilo Bambang Yudhoyono pada 11 Juni 2009.
+        </p>
+
+        <p>
+            Tujuan utama pembangunan jembatan ini adalah untuk mempercepat
+            pembangunan di Pulau Madura, khususnya di bidang infrastruktur
+            dan perekonomian yang sebelumnya tertinggal dibandingkan wilayah lain
+            di Jawa Timur.
+        </p>
+
+        <h3>Konstruksi dan Struktur Jembatan</h3>
+
+        <p>
+            Jembatan Suramadu merupakan gabungan dari tiga jenis jembatan,
+            yaitu jalan layang, jembatan penghubung, dan jembatan utama.
+            Lebar jembatan mencapai sekitar 30 meter dengan empat lajur dua arah,
+            dua lajur darurat, serta lajur khusus sepeda motor di setiap sisi.
+        </p>
+
+        <p>
+            Bagian jembatan utama menggunakan konstruksi <em>cable stayed</em>
+            dengan bentang utama sepanjang 434 meter dan dua bentang samping
+            masing-masing sepanjang 192 meter. Jembatan ini ditopang oleh
+            menara kembar setinggi sekitar 140 meter.
+        </p>
+
+        <h3>Jalan Layang dan Jembatan Penghubung</h3>
+
+        <p>
+            Jalan layang dibangun untuk menghubungkan jembatan dengan daratan
+            melalui perairan dangkal. Pada sisi Surabaya, jalan layang memiliki
+            panjang sekitar 1.458 meter, sedangkan di sisi Madura mencapai
+            1.818 meter.
+        </p>
+
+        <p>
+            Selain itu, terdapat jembatan penghubung yang mengaitkan
+            jembatan utama dengan jalan layang, masing-masing sepanjang
+            672 meter di kedua sisi.
+        </p>
+
+        <h3>Dampak Ekonomi dan Sosial</h3>
+
+        <p>
+            Kehadiran Jembatan Suramadu memberikan dampak besar terhadap
+            pertumbuhan ekonomi dan mobilitas masyarakat. Pemerintah berharap
+            jembatan ini mampu mendorong pemerataan pembangunan dari Surabaya
+            ke wilayah Madura serta mengurangi laju urbanisasi yang berlebihan.
+        </p>
+
+        <p>
+            Hingga kini, Jembatan Suramadu tidak hanya menjadi sarana transportasi,
+            tetapi juga ikon penting bagi Kabupaten Bangkalan dan Pulau Madura
+            secara keseluruhan.
+        </p>
+    `;
+}
+
+if (id == 4) {
+    judul.innerText = "Bukit Jeddih";
+
+    gambarUtama.src = "images/bukit.jpg";
+    gambar1.src = "fot/bu.jpeg";
+    gambar2.src = "fot/kit.jpeg";
+
+    isi.innerHTML = `
+        <p>
+            Bukit Jeddih merupakan salah satu destinasi wisata alam yang terletak
+            di Kabupaten Bangkalan, Madura. Tempat ini dikenal dengan pemandangan
+            bukit kapur putih yang unik dan eksotis.
+        </p>
+
+        <p>
+            Kawasan ini awalnya merupakan area penambangan kapur, namun seiring
+            waktu berubah menjadi objek wisata karena keindahan alamnya yang
+            menyerupai pahatan alami.
+        </p>
+
+        <h3>Daya Tarik Utama</h3>
+
+        <p>
+            Daya tarik utama Bukit Jeddih adalah tebing-tebing kapur berwarna putih,
+            kolam air berwarna kehijauan, serta bentuk batuan yang artistik.
+            Banyak pengunjung memanfaatkan lokasi ini sebagai spot foto.
+        </p>
+
+        <h3>Lokasi dan Akses</h3>
+
+        <p>
+            Bukit Jeddih terletak di Desa Jeddih, Kecamatan Socah, Kabupaten Bangkalan.
+            Lokasinya dapat ditempuh sekitar 30 menit dari pusat Kota Bangkalan
+            dengan kendaraan pribadi.
+        </p>
+
+        <p>
+            Hingga kini, Bukit Jeddih menjadi salah satu destinasi wisata favorit
+            di Madura yang menarik wisatawan lokal maupun luar daerah.
+        </p>
+    `;
+}
+
+if (id == 5) {
+    judul.innerText = "Pantai Siring Kemuning";
+
+    gambarUtama.src = "fot/t.webp";
+    gambar1.src = "fot/pa.jpeg";
+    gambar2.src = "fot/n.jpeg";
+
+    isi.innerHTML = `
+        <p>
+            Pantai Siring Kemuning adalah salah satu pantai indah yang terletak
+            di Kabupaten Bangkalan, Madura. Pantai ini terkenal dengan pasir
+            putihnya yang lembut dan ombak yang relatif tenang.
+        </p>
+
+        <p>
+            Pantai ini sangat cocok untuk wisata keluarga karena suasananya
+            yang masih alami dan jauh dari keramaian kota.
+        </p>
+
+        <h3>Keindahan Alam</h3>
+
+        <p>
+            Pemandangan laut lepas dengan hamparan pasir putih serta deretan
+            perahu nelayan menjadi daya tarik utama Pantai Siring Kemuning.
+            Saat sore hari, pengunjung dapat menikmati matahari terbenam
+            yang sangat memukau.
+        </p>
+
+        <h3>Aktivitas Wisata</h3>
+
+        <p>
+            Pengunjung dapat bersantai, bermain pasir, menikmati kuliner laut,
+            hingga berfoto dengan latar belakang laut biru yang indah.
+        </p>
+
+        <p>
+            Pantai Siring Kemuning menjadi salah satu ikon wisata pantai
+            di Bangkalan yang patut dikunjungi.
+        </p>
+    `;
+}
+
+if (id == 6) {
+    judul.innerText = "Bebek Sinjay";
+
+    gambarUtama.src = "fot/si.webp";
+    gambar1.src = "fot/nj.webp";
+    gambar2.src = "images/sinjai.jpeg";
+
+    isi.innerHTML = `
+        <p>
+            Bebek Sinjay merupakan kuliner khas Bangkalan yang sangat terkenal
+            hingga ke luar Pulau Madura. Hidangan ini dikenal dengan rasa
+            daging bebek yang gurih dan sambalnya yang khas.
+        </p>
+
+        <p>
+            Nama Sinjay berasal dari nama pemilik usaha kuliner ini yang
+            pertama kali mempopulerkannya.
+        </p>
+
+        <h3>Ciri Khas Rasa</h3>
+
+        <p>
+            Bebek Sinjay disajikan dengan bebek goreng yang renyah di luar
+            namun empuk di dalam, serta sambal pencit (mangga muda)
+            yang memberikan rasa pedas dan segar.
+        </p>
+
+        <h3>Daya Tarik Kuliner</h3>
+
+        <p>
+            Banyak wisatawan yang rela antre panjang demi mencicipi
+            Bebek Sinjay. Kuliner ini menjadi salah satu ikon
+            kuliner wajib saat berkunjung ke Bangkalan.
+        </p>
+    `;
+}
+
+if (id == 7) {
+    judul.innerText = "Kuliner Khas Bangkalan";
+
+    gambarUtama.src = "fot/serpang.webp";
+    gambar1.src = "fot/ser.jpeg";
+    gambar2.src = "fot/pang.webp";
+
+    isi.innerHTML = `
+        <p>
+            Bangkalan memiliki beragam kuliner khas yang kaya akan cita rasa
+            dan bumbu tradisional Madura. Setiap hidangan mencerminkan
+            kekayaan budaya dan tradisi masyarakat setempat.
+        </p>
+
+        <h3>Jenis Kuliner Populer</h3>
+
+        <p>
+            Beberapa kuliner khas Bangkalan yang terkenal antara lain
+            Bebek Sinjay, sate Madura, nasi serpang, dan tajin sobih.
+        </p>
+
+        <p>
+            Makanan-makanan tersebut dikenal dengan rasa gurih,
+            pedas, dan aroma rempah yang kuat.
+        </p>
+
+        <h3>Identitas Budaya</h3>
+
+        <p>
+            Kuliner khas Bangkalan tidak hanya menjadi sajian makanan,
+            tetapi juga bagian dari identitas budaya Madura yang
+            terus dilestarikan hingga kini.
+        </p>
+    `;
+}
+
+if (id == 8) {
+    judul.innerText = "Kerapan Sapi";
+
+    gambarUtama.src = "fot/ker.jpg";
+    gambar1.src = "fot/rap.jpeg";
+    gambar2.src = "fot/sapi.webp";
+
+    isi.innerHTML = `
+        <p>
+            Kerapan Sapi adalah tradisi budaya khas Madura yang telah
+            diwariskan secara turun-temurun. Tradisi ini berupa
+            perlombaan pacuan sapi yang dilakukan di lintasan tanah.
+        </p>
+
+        <p>
+            Kerapan Sapi biasanya digelar pada musim tertentu dan
+            menjadi ajang prestise bagi para pemilik sapi.
+        </p>
+
+        <h3>Makna Budaya</h3>
+
+        <p>
+            Tradisi Kerapan Sapi tidak hanya sekadar perlombaan,
+            tetapi juga memiliki nilai sosial, budaya, dan ekonomi
+            bagi masyarakat Madura.
+        </p>
+
+        <h3>Daya Tarik Wisata</h3>
+
+        <p>
+            Kerapan Sapi sering menarik perhatian wisatawan lokal
+            maupun mancanegara karena keunikan dan kemeriahan acaranya.
+            Tradisi ini menjadi salah satu ikon budaya Madura.
+        </p>
+    `;
+}
+
+</script>
+
+
+        <!-- ======================= FOOTER ======================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Kolom Kiri - Nama Sekolah & Kontak -->
+            <div class="footer-left">
+                <h2 class="footer-logo">QuizKalan</h2>
+                <p class="school-name">
+                    Alamat Sekolah :<br>
+                    Jl. Esemka No 1<br>
+                    Panjalinan, Blega<br>
+                    Bangkalan
+                </p><br>
+                <p class="contact-info">
+                    Telepon: +62-81334131755<br>
+                    Telepon: +62-81958794091<br><br>
+                    Email: afkarafnani57@gmail.com<br>
+                    Email: roihanassobirin@gmail.com<br>
+                </p>
+            </div>
+
+            <!-- Kolom Kanan - Sosial Media -->
+            <div class="footer-right">
+                <h3 class="sosmed-title">Sosial Media</h3>
+                <p class="sosmed-desc">
+                    Tim Kami Memiliki Beberapa Sosial<br>
+                    Media Yang Dapat Dikunjungi<br>
+                </p>
+                <div class="social-icons">
+                    <a href="https://wa.me/6281334131755" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rxl.gnn?igsh=MTBxb3RsdG9saGd6dQ==" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@afkarafnani2069?si=Upj0US6ZXBzy0d7Q" class="social-icon youtube" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@mafkarafnanis?_r=1&_t=ZS-91ZfGafj3Bq" class="social-icon tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="footer-bottom">
+            <p>© 2025 • Karya Afgan & Roy • QuizKalan: Peel The Salak
+                Dari Bangkalan, Untuk Indonesia
+                All Rights Reserved.</p>
+            <p>Designed by Afgan and Roihan</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

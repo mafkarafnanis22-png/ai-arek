@@ -33,7 +33,7 @@
         <div class="materi-grid">
 
             <!-- Card 1: Pengenalan -->
-            <div class="materi-card">
+            <div class="materi-card" onclick="openDetail(1)">
                 <div class="card-icon"><i class="fas fa-map-signs"></i></div>
                 <h2>Pengenalan Kota Salak</h2>
                 <p>
@@ -46,7 +46,7 @@
             </div>
 
             <!-- Card 2: Sejarah -->
-            <div class="materi-card">
+            <div class="materi-card" onclick="openDetail(2)">
                 <div class="card-icon"><i class="fas fa-scroll"></i></div>
                 <h2>Sejarah Singkat Bangkalan</h2>
                 <p>
@@ -59,7 +59,7 @@
             </div>
 
             <!-- Card 3: Jembatan Suramadu -->
-            <div class="materi-card">
+           <div class="materi-card" onclick="openDetail(3)">
                 <div class="card-icon"><i class="fas fa-archway"></i></div>
                 <h2>Jembatan Suramadu</h2>
                 <p>
@@ -72,7 +72,7 @@
             </div>
 
             <!-- Card 4: Bukit Jaddih -->
-            <div class="materi-card">
+         <div class="materi-card" onclick="openDetail(4)">
                 <div class="card-icon"><i class="fas fa-mountain"></i></div>
                 <h2>Bukit Jaddih</h2>
                 <p>
@@ -85,7 +85,7 @@
             </div>
 
             <!-- Card 5: Pantai Siring Kemuning -->
-            <div class="materi-card">
+           <div class="materi-card" onclick="openDetail(5)">
                 <div class="card-icon"><i class="fas fa-umbrella-beach"></i></div>
                 <h2>Pantai Siring Kemuning</h2>
                 <p>
@@ -96,7 +96,7 @@
             </div>
 
             <!-- Card 6: Bebek Sinjay -->
-            <div class="materi-card">
+           <div class="materi-card" onclick="openDetail(6)">
                 <div class="card-icon"><i class="fas fa-drumstick-bite"></i></div>
                 <h2>Bebek Sinjay</h2>
                 <p>
@@ -107,8 +107,8 @@
                 <img src="images/sinjai.jpeg" alt="Bebek Sinjay">
             </div>
 
-            <!-- Card BARU: Kuliner Khas Lainnya (Kaldu Kokot & Nasi Serpang) -->
-            <div class="materi-card">
+            <!-- Card 7: Kuliner Khas Lainnya (Kaldu Kokot & Nasi Serpang) -->
+            <div class="materi-card" onclick="openDetail(7)">
                 <div class="card-icon"><i class="fas fa-bowl-food"></i></div>
                 <h2>Kuliner Khas Bangkalan</h2>
                 <p>
@@ -120,8 +120,8 @@
                 <img src="images/serpang.jpeg" alt="Nasi Serpang Bangkalan">
             </div>
 
-            <!-- Card 7: Karapan Sapi -->
-            <div class="materi-card">
+            <!-- Card 8: Karapan Sapi -->
+            <div class="materi-card" onclick="openDetail(8)">
                 <div class="card-icon"><i class="fas fa-horse"></i></div>
                 <h2>Karapan Sapi</h2>
                 <p>
@@ -164,6 +164,7 @@
     </div>
 
     <script>
+        // audio sound
         function toggleSaronen() {
             const audio = document.getElementById("saronen-audio");
             const status = document.getElementById("play-status");
@@ -176,6 +177,11 @@
                 status.innerHTML = "";
             }
         }
+
+        //pindah detail.html
+        function openDetail(id) {
+    window.location.href = "detail.html?id=" + id;
+}
     </script>
 
         <!-- ======================= FOOTER ======================= -->
